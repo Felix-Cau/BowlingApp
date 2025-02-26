@@ -2,16 +2,18 @@
 
 namespace BowlingApp.Repository.Repositories;
 
-public class UserRepository
+public static class UserRepository
 {
-    private AppDbContext _context = new();
+    private static AppDbContext _context = new();
 
-    public User GetUser(User user)
+    public static (bool, User?) CheckUserLogin(string username, string password)
     {
-        return _context.Users.Find(user.Name);
+        User returnUser = _context.Users.FirstOrDefault(u => u.Name == username && u.Password == password);
+
+        return returnUser is null ? (false, returnUser) : (true, returnUser);
     }
     
-    public void SaveUser(User newUser)
+    public static void SaveUser(User newUser)
     {
         bool doesUserExist = _context.Users.Any(u => u.Name == newUser.Name);
 

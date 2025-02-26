@@ -1,6 +1,6 @@
 namespace BowlingApp.Utilities;
 
-public class UserInputHandler
+public static class UserInputHandler
 {
     public static int UserInputNumber()
     {

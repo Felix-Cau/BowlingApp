@@ -1,9 +1,7 @@
 namespace BowlingApp.Utilities;
 
-public static class DisplayMenuHandler
+public static class DisplayMenuMessages
 {
-    //Is this really a MenuFacade or some kind of "service"?
-    
     //Things connected to MainMenu
     private static List<string> mainMenuItems =
     [
@@ -27,6 +25,8 @@ public static class DisplayMenuHandler
     //Things connected to log in
     public const string EnterUsernameMessage = "Enter your Username (It's case sensitive):";
     public const string EnterPasswordMessage = "Enter your password (It's case sensitive):";
+    public const string InvalidLoginCredentials =
+        "Username or password is incorrect. Please try again and remember that they are case sensitive. Press any key to continue.";
 
     //Things connected to when user is logged in
     private static List<string> userMenu =
@@ -44,6 +44,8 @@ public static class DisplayMenuHandler
         }
     }
     
+    public const string EnterOpponentMessage = "Enter your opponents name:";
+    
     //Create User Menu
     public const string CreateUsernameMessage = "Enter your Username:";
     public const string CreatePasswordMessage = "Enter your Password:";
@@ -51,4 +53,7 @@ public static class DisplayMenuHandler
     //Guest connected messages
     public const string EnterFirstGuestName = "Enter the name of the first player:";
     public const string EnterSecondGuestName = "Enter the name of the second player:";
+    
+    //Invalid option message
+    public const string InvalidOptionMessage = "Please enter a valid option! Press any key to continue.";
 }

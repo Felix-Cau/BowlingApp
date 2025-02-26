@@ -1,14 +1,14 @@
 ﻿using BowlingApp.Interfaces;
+using BowlingApp.Repository.Entities;
 
 namespace BowlingApp.Factories;
 
-public class PlayersFactory
+public static class PlayersFactory
 {
-    public List<IPlayer> Participants(IPlayer playerOne, IPlayer playerTwo)
+    //This made it worse.
+    public static List<IPlayer> Participants(IPlayer playerOne, IPlayer playerTwo)
     {
-        var players = new List<IPlayer>();
-        players.Add(playerOne);
-        players.Add(playerTwo);
+        List<IPlayer> players = new() {playerOne, playerTwo};
         return players;
     }
 }
