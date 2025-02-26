@@ -49,6 +49,7 @@ public static class DisplayMenuMessages
     //Create User Menu
     public const string CreateUsernameMessage = "Enter your Username:";
     public const string CreatePasswordMessage = "Enter your Password:";
+    public const string CouldNotCreateUserWithThatUsername = "The Username is already taken. Press any key to continue and try again.";
     
     //Guest connected messages
     public const string EnterFirstGuestName = "Enter the name of the first player:";

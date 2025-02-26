@@ -13,16 +13,17 @@ public static class UserRepository
         return returnUser is null ? (false, returnUser) : (true, returnUser);
     }
     
-    public static void SaveUser(User newUser)
+    public static bool SaveUser(User newUser)
     {
         bool doesUserExist = _context.Users.Any(u => u.Name == newUser.Name);
 
         if (doesUserExist)
         {
             //Insert logging here
-            return;
+            return false;
         }
         _context.Users.Add(newUser);
         _context.SaveChanges();
+        return true;
     }
 }

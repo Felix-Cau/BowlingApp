@@ -34,7 +34,7 @@ public class GameFacade
                             switch (userMenuInput)
                             {
                                 case 1:
-                                    MenuHandler.PlayGameOption(loggedInUser!);
+                                    MenuHandler.PlayGameOptionAsLoggedIn(loggedInUser!);
                                     break;
                                 case 2:
                                     keepLoggedInGoing = false;
@@ -51,9 +51,38 @@ public class GameFacade
                     break;
                 //Create user
                 case 2:
+                    (bool createdUser, User? newUser) = MenuHandler.CreateUser();
+                    
+                    if (createdUser)
+                    {
+                        var keepLoggedInAfterCreateGoing = true;
+                        
+                        do
+                        {
+                            DisplayMenuMessages.DisplayUserMenu();
+                            int userMenuInput = UserInputHandler.UserInputNumber();
+
+                            switch (userMenuInput)
+                            {
+                                case 1:
+                                    MenuHandler.PlayGameOptionAsLoggedIn(newUser!);
+                                    break;
+                                case 2:
+                                    keepLoggedInAfterCreateGoing = false;
+                                    break;
+                                default:
+                                    Console.WriteLine(DisplayMenuMessages.InvalidOptionMessage);
+                                    Console.ReadKey();
+                                    break;
+                            }
+                        } while (keepLoggedInAfterCreateGoing);
+                    }
+                    Console.WriteLine(DisplayMenuMessages.CouldNotCreateUserWithThatUsername);
+                    Console.ReadKey();
                     break;
                 //Continue as Guest
                 case 3:
+                    MenuHandler.PlayGameOptionAsGuest();
                     break;
                 //Exit game
                 case 4:
