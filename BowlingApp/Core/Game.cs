@@ -6,14 +6,18 @@ public static class Game
 {
     public static void Run(List<IPlayer> players)
     {
+        Console.Clear();
         string playerOneName = players[0].Name;
         int playerOneScore = RandomScore();
         string playerTwoName = players[1].Name;
         int playerTwoScore = RandomScore();
+
+        (var winner, var winnerScore) = playerOneScore > playerTwoScore ? (playerOneName, playerOneScore) : (playerTwoName, playerTwoScore);
+        (var loser, var loserScore) = playerOneScore > playerTwoScore ? (playerTwoName, playerTwoScore) : (playerOneName, playerOneScore);
         
-        var winner = playerOneScore > playerTwoScore ? playerOneName : playerTwoName;
-        
-        Console.WriteLine($"The winner is {winner}! Press any key to continue.");
+        Console.WriteLine($"The winner is {winner} with {winnerScore}!");
+        Console.WriteLine($"{loser} lost with {loserScore}..");
+        Console.WriteLine("Press any key to continue...");
     }
 
     private static int RandomScore()

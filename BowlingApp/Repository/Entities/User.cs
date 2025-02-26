@@ -6,6 +6,7 @@ namespace BowlingApp.Repository.Entities;
 public class User : IPlayer
 {
     [Key]
+    [Required]
     public string Name { get; set; }
     [Required]
     public string Password { get; set;  }

@@ -39,6 +39,13 @@ public class GameFacade
                                 case 2:
                                     keepLoggedInGoing = false;
                                     break;
+                                case 3:
+                                    bool isTheUserStillInDb = MenuHandler.DeleteUser(loggedInUser!);
+                                    if (!isTheUserStillInDb)
+                                    {
+                                        keepLoggedInGoing = false;
+                                    }
+                                    break;
                                 default:
                                     Console.WriteLine(DisplayMenuMessages.InvalidOptionMessage);
                                     Console.ReadKey();
@@ -46,8 +53,11 @@ public class GameFacade
                             }
                         } while (keepLoggedInGoing);
                     }
-                    Console.WriteLine(DisplayMenuMessages.InvalidLoginCredentials);
-                    Console.ReadKey();
+                    else
+                    {
+                        Console.WriteLine(DisplayMenuMessages.InvalidLoginCredentials);
+                        Console.ReadKey();
+                    }
                     break;
                 //Create user
                 case 2:
@@ -70,6 +80,13 @@ public class GameFacade
                                 case 2:
                                     keepLoggedInAfterCreateGoing = false;
                                     break;
+                                case 3:
+                                    bool isTheUserStillInDb = MenuHandler.DeleteUser(newUser!);
+                                    if (!isTheUserStillInDb)
+                                    {
+                                        keepLoggedInAfterCreateGoing = false;
+                                    }
+                                    break;
                                 default:
                                     Console.WriteLine(DisplayMenuMessages.InvalidOptionMessage);
                                     Console.ReadKey();
@@ -77,8 +94,11 @@ public class GameFacade
                             }
                         } while (keepLoggedInAfterCreateGoing);
                     }
-                    Console.WriteLine(DisplayMenuMessages.CouldNotCreateUserWithThatUsername);
-                    Console.ReadKey();
+                    else
+                    {
+                        Console.WriteLine(DisplayMenuMessages.CouldNotCreateUserWithThatUsername);
+                        Console.ReadKey();
+                    }
                     break;
                 //Continue as Guest
                 case 3:

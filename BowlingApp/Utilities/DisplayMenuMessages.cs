@@ -32,7 +32,8 @@ public static class DisplayMenuMessages
     private static List<string> userMenu =
     [
         "1. Start Game",
-        "2. Logout"
+        "2. Logout",
+        "3. Delete Account"
     ];
 
     public static void DisplayUserMenu()

@@ -26,4 +26,14 @@ public static class UserRepository
         _context.SaveChanges();
         return true;
     }
+
+    public static bool DeleteUser(User user)
+    {
+        _context.Users.Remove(user);
+        _context.SaveChanges();
+        
+        bool isUserRemoved = _context.Users.Any(u => u.Name == user.Name);
+        
+        return isUserRemoved;
+    }
 }

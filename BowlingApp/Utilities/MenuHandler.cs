@@ -40,11 +40,22 @@ public static class MenuHandler
         return (false, nullUser);
     }
 
+    public static bool DeleteUser(User user)
+    {
+        Console.Clear();
+        
+        bool IsTheUserStillInDb = UserRepository.DeleteUser(user);
+        
+        return IsTheUserStillInDb;
+    }
+
     public static void PlayGameOptionAsLoggedIn(User loggedInUser)
     {
+        Console.Clear();
         Console.WriteLine(DisplayMenuMessages.EnterOpponentMessage);
         var guestName = UserInputHandler.UserInputString();
         Guest newGuest = new Guest(guestName);
+        Console.Clear();
         
         List<IPlayer> players = PlayersFactory.Participants(loggedInUser, newGuest);
 
@@ -54,6 +65,7 @@ public static class MenuHandler
 
     public static void PlayGameOptionAsGuest()
     {
+        Console.Clear();
         Console.WriteLine(DisplayMenuMessages.EnterFirstGuestName);
         var guestNameOne = UserInputHandler.UserInputString();
         Guest guestOne = new Guest(guestNameOne);
