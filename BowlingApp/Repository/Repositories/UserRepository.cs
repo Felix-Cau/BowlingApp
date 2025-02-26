@@ -4,12 +4,7 @@ namespace BowlingApp.Repository.Repositories;
 
 public class UserRepository
 {
-    private readonly AppDbContext _context;
-
-    public UserRepository(AppDbContext context)
-    {
-        _context = context;
-    }
+    private AppDbContext _context = new();
 
     public List<User> GetAllUsers()
     {
