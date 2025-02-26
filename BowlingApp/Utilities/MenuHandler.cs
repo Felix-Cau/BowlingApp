@@ -24,9 +24,9 @@ public static class MenuHandler
     public static (bool, User?) CreateUser()
     {
         Console.Clear();
-        Console.WriteLine(DisplayMenuMessages.EnterUsernameMessage);
+        Console.WriteLine(DisplayMenuMessages.CreateUsernameMessage);
         var username = UserInputHandler.UserInputString();
-        Console.WriteLine(DisplayMenuMessages.EnterPasswordMessage);
+        Console.WriteLine(DisplayMenuMessages.CreatePasswordMessage);
         var password = UserInputHandler.UserInputString();
         User newUser = new(username, password);
         
@@ -57,9 +57,10 @@ public static class MenuHandler
         Guest newGuest = new Guest(guestName);
         Console.Clear();
         
-        List<IPlayer> players = PlayersFactory.Participants(loggedInUser, newGuest);
+        List<IPlayer> players = PlayersFactory.ParticipantsList(loggedInUser, newGuest);
 
-        Game.Run(players);
+        var game = GameFactory.CreateGame("bowling");
+        game.Run(players);
         Console.ReadKey();
     }
 
@@ -73,9 +74,10 @@ public static class MenuHandler
         var guestNameTwo = UserInputHandler.UserInputString();
         Guest guestTwo = new Guest(guestNameTwo);
         
-        List<IPlayer> players = PlayersFactory.Participants(guestOne, guestTwo);
+        List<IPlayer> players = PlayersFactory.ParticipantsList(guestOne, guestTwo);
         
-        Game.Run(players);
+        var game = GameFactory.CreateGame("bowling");
+        game.Run(players);
         Console.ReadKey();
     }
 }

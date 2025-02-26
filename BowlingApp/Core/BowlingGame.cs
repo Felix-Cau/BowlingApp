@@ -2,9 +2,9 @@ using BowlingApp.Interfaces;
 
 namespace BowlingApp.Core;
 
-public static class Game
+public class BowlingGame : IGame
 {
-    public static void Run(List<IPlayer> players)
+    public void Run(List<IPlayer> players)
     {
         Console.Clear();
         string playerOneName = players[0].Name;
@@ -12,8 +12,9 @@ public static class Game
         string playerTwoName = players[1].Name;
         int playerTwoScore = RandomScore();
 
-        (var winner, var winnerScore) = playerOneScore > playerTwoScore ? (playerOneName, playerOneScore) : (playerTwoName, playerTwoScore);
-        (var loser, var loserScore) = playerOneScore > playerTwoScore ? (playerTwoName, playerTwoScore) : (playerOneName, playerOneScore);
+        var (winner, winnerScore, loser, loserScore) = playerOneScore > playerTwoScore 
+            ? (playerOneName, playerOneScore, playerTwoName, playerTwoScore) 
+            : (playerTwoName, playerTwoScore, playerOneName, playerOneScore);
         
         Console.WriteLine($"The winner is {winner} with {winnerScore}!");
         Console.WriteLine($"{loser} lost with {loserScore}..");
