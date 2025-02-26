@@ -1,1 +1,4 @@
-﻿Console.WriteLine("Hello World!");
+﻿using BowlingApp.Facades;
+
+GameFacade game = new();
+game.StartGame();

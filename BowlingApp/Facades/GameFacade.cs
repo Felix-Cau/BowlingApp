@@ -2,5 +2,8 @@
 
 public class GameFacade
 {
-    
+    public void StartGame()
+    {
+        
+    }
 }

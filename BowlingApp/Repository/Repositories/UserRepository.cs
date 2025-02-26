@@ -6,14 +6,20 @@ public class UserRepository
 {
     private AppDbContext _context = new();
 
-    public List<User> GetAllUsers()
+    public User GetUser(User user)
     {
-        return _context.Users.ToList();
+        return _context.Users.Find(user.Name);
     }
-
-    //Change this to return a bool if save was successfull or if the username already existed
+    
     public void SaveUser(User newUser)
     {
+        bool doesUserExist = _context.Users.Any(u => u.Name == newUser.Name);
+
+        if (doesUserExist)
+        {
+            //Insert logging here
+            return;
+        }
         _context.Users.Add(newUser);
         _context.SaveChanges();
     }
