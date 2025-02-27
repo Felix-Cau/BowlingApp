@@ -8,9 +8,8 @@ public class BowlingGame : IGame, IObserver
 {
     private readonly SingletonLogger _logger = SingletonLogger.Instance;
 
-    public void Run(List<IPlayer> players)
+    public void Run(params IPlayer[] players)
     {
-        Console.Clear();
         string playerOneName = players[0].Name;
         int playerOneScore = RandomScore();
         string playerTwoName = players[1].Name;

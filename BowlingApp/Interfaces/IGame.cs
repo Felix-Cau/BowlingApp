@@ -2,5 +2,6 @@ namespace BowlingApp.Interfaces;
 
 public interface IGame
 {
-    void Run(List<IPlayer> players);
+    void Run(params IPlayer[] players);
+    //void Run(List<IPlayer> players);
 }

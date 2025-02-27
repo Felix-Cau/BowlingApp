@@ -3,13 +3,12 @@ using BowlingApp.Interfaces;
 using BowlingApp.Repository.Entities;
 using BowlingApp.Repository.Repositories;
 using BowlingApp.Services;
-using System.Xml.Linq;
 
 namespace BowlingApp.Utilities;
 
 public class MenuHandler : IObserver
 {
-    private UserRepository _userRepository = new();
+    private readonly UserRepository _userRepository = new();
     private readonly SingletonLogger _logger = SingletonLogger.Instance;
     private readonly EventSystem _eventSystem = new();
 
@@ -55,11 +54,8 @@ public class MenuHandler : IObserver
         Console.WriteLine(DisplayMenuMessages.EnterOpponentMessage);
         var guestName = UserInputHandler.UserInputString();
         Guest newGuest = new Guest(guestName);
-        Console.Clear();
-        
-        List<IPlayer> players = PlayersFactory.ParticipantsList(loggedInUser, newGuest);
 
-        PlayGame(players);
+        PlayGame(loggedInUser, newGuest);
     }
 
     public void PlayGameOptionAsNonUser()
@@ -70,13 +66,13 @@ public class MenuHandler : IObserver
         Console.WriteLine(DisplayMenuMessages.EnterSecondGuestName);
         var guestNameTwo = UserInputHandler.UserInputString();
         Guest guestTwo = new Guest(guestNameTwo);
-        
-        List<IPlayer> players = PlayersFactory.ParticipantsList(guestOne, guestTwo);
 
-        PlayGame(players);
+        List<IPlayer> players = [guestOne, guestTwo];
+
+        PlayGame(guestOne, guestTwo);
     }
 
-    private void PlayGame(List<IPlayer> players)
+    private void PlayGame(params IPlayer[] players)
     {
         var game = GameFactory.CreateGame("bowling");
         IObserver gameObserver = (IObserver)game;
