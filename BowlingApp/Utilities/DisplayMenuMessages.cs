@@ -15,7 +15,6 @@ public static class DisplayMenuMessages
 
     public static void DisplayMainMenu()
     {
-        Console.Clear();
         foreach (string str in mainMenuItems)
         {
             Console.WriteLine(str);
@@ -38,7 +37,6 @@ public static class DisplayMenuMessages
 
     public static void DisplayUserMenu()
     {
-        Console.Clear();
         foreach (string str in userMenu)
         {
             Console.WriteLine(str);

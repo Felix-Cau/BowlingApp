@@ -1,4 +1,4 @@
-﻿using BowlingApp.Repository.Entities;
+﻿    using BowlingApp.Repository.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 

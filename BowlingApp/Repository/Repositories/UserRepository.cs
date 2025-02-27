@@ -1,19 +1,22 @@
-﻿using BowlingApp.Repository.Entities;
+﻿using BowlingApp.Interfaces;
+using BowlingApp.Repository.Entities;
+using BowlingApp.Services;
 
 namespace BowlingApp.Repository.Repositories;
 
-public static class UserRepository
+public class UserRepository : IObserver
 {
     private static AppDbContext _context = new();
+    private readonly SingletonLogger _logger = SingletonLogger.Instance;
 
-    public static (bool, User?) CheckUserLogin(string username, string password)
+    public (bool, User?) CheckUserLogin(string username, string password)
     {
         User returnUser = _context.Users.FirstOrDefault(u => u.Name == username && u.Password == password);
 
         return returnUser is null ? (false, returnUser) : (true, returnUser);
     }
     
-    public static bool SaveUser(User newUser)
+    public bool SaveUser(User newUser)
     {
         bool doesUserExist = _context.Users.Any(u => u.Name == newUser.Name);
 
@@ -27,7 +30,7 @@ public static class UserRepository
         return true;
     }
 
-    public static bool DeleteUser(User user)
+    public bool DeleteUser(User user)
     {
         _context.Users.Remove(user);
         _context.SaveChanges();
@@ -35,5 +38,10 @@ public static class UserRepository
         bool isUserRemoved = _context.Users.Any(u => u.Name == user.Name);
         
         return isUserRemoved;
+    }
+
+    public void OnEvent(string eventType)
+    {
+        _logger.Log(eventType);
     }
 }

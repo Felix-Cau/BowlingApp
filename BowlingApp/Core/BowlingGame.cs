@@ -1,9 +1,13 @@
 using BowlingApp.Interfaces;
+using BowlingApp.Services;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace BowlingApp.Core;
 
-public class BowlingGame : IGame
+public class BowlingGame : IGame, IObserver
 {
+    private readonly SingletonLogger _logger = SingletonLogger.Instance;
+
     public void Run(List<IPlayer> players)
     {
         Console.Clear();
@@ -26,5 +30,10 @@ public class BowlingGame : IGame
         Random random = new Random();
         int randomScore = random.Next(0, 300);
         return randomScore;
+    }
+
+    public void OnEvent(string eventType)
+    {
+        _logger.Log(eventType);
     }
 }
