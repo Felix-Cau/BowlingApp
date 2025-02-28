@@ -11,13 +11,14 @@ public class MenuHandler : IObserver
     private readonly UserRepository _userRepository = new();
     private readonly SingletonLogger _logger = SingletonLogger.Instance;
     private readonly EventSystem _eventSystem = new();
+    readonly UserInputHandler _userInputHandler = new();
 
     public (bool, User?) LoginMenuOption()
     {
         Console.WriteLine(DisplayMenuMessages.EnterUsernameMessage);
-        var username = UserInputHandler.UserInputString();
+        var username = _userInputHandler.UserInputString();
         Console.WriteLine(DisplayMenuMessages.EnterPasswordMessage);
-        var password = UserInputHandler.UserInputString();
+        var password = _userInputHandler.UserInputString();
         
         (bool successfullLogin, User? user) = _userRepository.CheckUserLogin(username, password);
         
@@ -27,9 +28,9 @@ public class MenuHandler : IObserver
     public (bool, User?) CreateUser()
     {
         Console.WriteLine(DisplayMenuMessages.CreateUsernameMessage);
-        var username = UserInputHandler.UserInputString();
+        var username = _userInputHandler.UserInputString();
         Console.WriteLine(DisplayMenuMessages.CreatePasswordMessage);
-        var password = UserInputHandler.UserInputString();
+        var password = _userInputHandler.UserInputString();
         User newUser = new(username, password);
         
         bool couldUserBeSavedWithThatUserName = _userRepository.SaveUser(newUser);
@@ -52,7 +53,7 @@ public class MenuHandler : IObserver
     public void PlayGameOptionAsLoggedIn(User loggedInUser)
     {
         Console.WriteLine(DisplayMenuMessages.EnterOpponentMessage);
-        var guestName = UserInputHandler.UserInputString();
+        var guestName = _userInputHandler.UserInputString();
         Guest newGuest = new Guest(guestName);
 
         PlayGame(loggedInUser, newGuest);
@@ -61,13 +62,11 @@ public class MenuHandler : IObserver
     public void PlayGameOptionAsNonUser()
     {
         Console.WriteLine(DisplayMenuMessages.EnterFirstGuestName);
-        var guestNameOne = UserInputHandler.UserInputString();
+        var guestNameOne = _userInputHandler.UserInputString();
         Guest guestOne = new Guest(guestNameOne);
         Console.WriteLine(DisplayMenuMessages.EnterSecondGuestName);
-        var guestNameTwo = UserInputHandler.UserInputString();
+        var guestNameTwo = _userInputHandler.UserInputString();
         Guest guestTwo = new Guest(guestNameTwo);
-
-        List<IPlayer> players = [guestOne, guestTwo];
 
         PlayGame(guestOne, guestTwo);
     }

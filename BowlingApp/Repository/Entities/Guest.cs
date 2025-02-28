@@ -10,5 +10,4 @@ public class Guest : IPlayer
     {
         Name = name;
     }
-
 }

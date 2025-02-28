@@ -1,6 +1,5 @@
 using BowlingApp.Interfaces;
 using BowlingApp.Services;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace BowlingApp.Core;
 

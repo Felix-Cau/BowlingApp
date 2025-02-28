@@ -1,17 +1,15 @@
-﻿using BowlingApp.Core;
-using BowlingApp.Factories;
-using BowlingApp.Repository.Entities;
-using BowlingApp.Repository.Repositories;
+﻿using BowlingApp.Repository.Entities;
 using BowlingApp.Utilities;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace BowlingApp.Services;
 
 public class GameFacade
 {
-    MenuHandler _menuHandler = new();
+    private readonly MenuHandler _menuHandler = new();
     private readonly EventSystem _eventSystem = new();
-    private readonly SingletonLogger _logger = SingletonLogger.Instance;
+    private readonly UserInputHandler _userInputHandler = new();
+    //Remove this and make class static?
+    private readonly DisplayMenuMessages _displayMenuMessages = new();
 
     public void StartGame()
     {
@@ -23,8 +21,8 @@ public class GameFacade
 
         do
         {
-            DisplayMenuMessages.DisplayMainMenu();
-            int userMainMenuInput = UserInputHandler.UserInputNumber();
+            _displayMenuMessages.DisplayMainMenu();
+            int userMainMenuInput = _userInputHandler.UserInputNumber();
 
             switch (userMainMenuInput)
             {
@@ -39,8 +37,8 @@ public class GameFacade
                         
                         do
                         {
-                            DisplayMenuMessages.DisplayUserMenu();
-                            int userMenuInput = UserInputHandler.UserInputNumber();
+                            _displayMenuMessages.DisplayUserMenu();
+                            int userMenuInput = _userInputHandler.UserInputNumber();
 
                             switch (userMenuInput)
                             {
@@ -82,8 +80,8 @@ public class GameFacade
                         
                         do
                         {
-                            DisplayMenuMessages.DisplayUserMenu();
-                            int userMenuInput = UserInputHandler.UserInputNumber();
+                            _displayMenuMessages.DisplayUserMenu();
+                            int userMenuInput = _userInputHandler.UserInputNumber();
 
                             switch (userMenuInput)
                             {
