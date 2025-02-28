@@ -2,7 +2,7 @@
 
 ### Overview ###
 
-This is a simple console application written in C# that demonstrates the implementation of various design patterns. The purpose of this project is to provide a practical understanding of commonly used design patterns in software development.
+This is a simple console application written in C#. The purpose of this project is to provide a practical understanding of commonly used design patterns in software development.
 
 ### Design Patterns Implemented ###
 
