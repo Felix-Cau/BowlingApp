@@ -6,6 +6,8 @@ namespace BowlingApp.Repository.Repositories;
 
 public class UserRepository : IObserver
 {
+    //Part of the repository pattern to separate the database from the business logic.
+
     private static AppDbContext _context = new();
     private readonly SingletonLogger _logger = SingletonLogger.Instance;
 

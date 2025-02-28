@@ -8,6 +8,7 @@ namespace BowlingApp.Utilities;
 
 public class MenuHandler : IObserver
 {
+    //Creates an instance of the userRepository as a part of the Repository pattern to separate the business logic from the database.
     private readonly UserRepository _userRepository = new();
     private readonly SingletonLogger _logger = SingletonLogger.Instance;
     private readonly EventSystem _eventSystem = new();
@@ -73,12 +74,15 @@ public class MenuHandler : IObserver
 
     private void PlayGame(params IPlayer[] players)
     {
+        //Create a game of specified type depending on the input string.
         var game = GameFactory.CreateGame("bowling");
         IObserver gameObserver = (IObserver)game;
         _eventSystem.Subscribe("A game of Bowling has been played!", gameObserver);
 
         game.Run(players);
+
         _eventSystem.Notify("A game of Bowling has been played!");
+        _eventSystem.Unsubscribe("A game of Bowling has been played!", gameObserver);
 
         Console.ReadKey();
     }

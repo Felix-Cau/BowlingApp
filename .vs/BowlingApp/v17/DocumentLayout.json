@@ -1,0 +1,227 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\services\\eventsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\services\\eventsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\services\\singletonlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\services\\singletonlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\utilities\\menuhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\utilities\\menuhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\repository\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\repository\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\core\\bowlinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\core\\bowlinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\repository\\entities\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\repository\\entities\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\interfaces\\igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\interfaces\\igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\factories\\gamefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\factories\\gamefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\services\\gamefacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\services\\gamefacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\utilities\\displaymenumessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\utilities\\displaymenumessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\repository\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\repository\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|c:\\dev\\skola\\ooad\\examinationsuppgift\\bowlingapp\\bowlingapp\\utilities\\userinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0B67FA-C632-4334-9A46-730FC117897E}|BowlingApp\\BowlingApp.csproj|solutionrelative:bowlingapp\\utilities\\userinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Guest.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Repository\\Entities\\Guest.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Repository\\Entities\\Guest.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Repository\\Entities\\Guest.cs",
+              "RelativeToolTip": "BowlingApp\\Repository\\Entities\\Guest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T13:53:04.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IGame.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Interfaces\\IGame.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Interfaces\\IGame.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Interfaces\\IGame.cs",
+              "RelativeToolTip": "BowlingApp\\Interfaces\\IGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T13:52:59.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EventSystem.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Services\\EventSystem.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Services\\EventSystem.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Services\\EventSystem.cs",
+              "RelativeToolTip": "BowlingApp\\Services\\EventSystem.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T13:50:18.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SingletonLogger.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Services\\SingletonLogger.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Services\\SingletonLogger.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Services\\SingletonLogger.cs",
+              "RelativeToolTip": "BowlingApp\\Services\\SingletonLogger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T13:50:14.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BowlingGame.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Core\\BowlingGame.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Core\\BowlingGame.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Core\\BowlingGame.cs",
+              "RelativeToolTip": "BowlingApp\\Core\\BowlingGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T13:36:24.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Repository\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Repository\\AppDbContext.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Repository\\AppDbContext.cs",
+              "RelativeToolTip": "BowlingApp\\Repository\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:50:17.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Repository\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Repository\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Repository\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "BowlingApp\\Repository\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:35:40.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameFacade.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Services\\GameFacade.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Services\\GameFacade.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Services\\GameFacade.cs",
+              "RelativeToolTip": "BowlingApp\\Services\\GameFacade.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAF0AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:32:21.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameFactory.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Factories\\GameFactory.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Factories\\GameFactory.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Factories\\GameFactory.cs",
+              "RelativeToolTip": "BowlingApp\\Factories\\GameFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:32:19.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuHandler.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Utilities\\MenuHandler.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Utilities\\MenuHandler.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Utilities\\MenuHandler.cs",
+              "RelativeToolTip": "BowlingApp\\Utilities\\MenuHandler.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAswEcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:32:14.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserInputHandler.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Utilities\\UserInputHandler.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Utilities\\UserInputHandler.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Utilities\\UserInputHandler.cs",
+              "RelativeToolTip": "BowlingApp\\Utilities\\UserInputHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:31:11.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DisplayMenuMessages.cs",
+              "DocumentMoniker": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Utilities\\DisplayMenuMessages.cs",
+              "RelativeDocumentMoniker": "BowlingApp\\Utilities\\DisplayMenuMessages.cs",
+              "ToolTip": "C:\\dev\\Skola\\OOAD\\Examinationsuppgift\\BowlingApp\\BowlingApp\\Utilities\\DisplayMenuMessages.cs",
+              "RelativeToolTip": "BowlingApp\\Utilities\\DisplayMenuMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:30:38.084Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 namespace BowlingApp.Utilities;
 
-public class DisplayMenuMessages
+public static class DisplayMenuMessages
 {
     //Things connected to MainMenu
-    private List<string> mainMenuItems =
+    private static List<string> mainMenuItems =
     [
         "Welcome to the Bowling app!",
         "Navigate in the menu by simply writing the number of the option you wish to do.",
@@ -13,7 +13,7 @@ public class DisplayMenuMessages
         "4. Exit Game"
     ];
 
-    public void DisplayMainMenu()
+    public static void DisplayMainMenu()
     {
         foreach (string str in mainMenuItems)
         {
@@ -28,14 +28,14 @@ public class DisplayMenuMessages
         "Username or password is incorrect. Please try again and remember that they are case sensitive. Press any key to continue.";
 
     //Things connected to when user is logged in
-    private List<string> userMenu =
+    private static List<string> userMenu =
     [
         "1. Start Game",
         "2. Logout",
         "3. Delete Account"
     ];
 
-    public void DisplayUserMenu()
+    public static void DisplayUserMenu()
     {
         foreach (string str in userMenu)
         {

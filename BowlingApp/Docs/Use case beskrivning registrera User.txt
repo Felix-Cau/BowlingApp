@@ -1,0 +1,11 @@
+Use case beskrivning registrera - Bowling App
+
+Regristrera
+
+1. Användaren startar appen.
+2. I huvudmenyn välj "Create user".
+3. Användaren anger användarnamn.
+4. Användaren anger lösenord.
+5. Systemet Kontrollerar sker om användarnamnet är upptaget.
+6a. Om användarnamnet inte är upptaget, användaren är registrerad och sparas till databasen.
+6b. Om användarnamnet är taget får användaren feedback och skickas tillbaka till steg 2.

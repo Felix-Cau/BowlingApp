@@ -5,11 +5,10 @@ namespace BowlingApp.Services;
 
 public class GameFacade
 {
+    //Hub for the business logic as a part of the Facade Pattern.
     private readonly MenuHandler _menuHandler = new();
     private readonly EventSystem _eventSystem = new();
     private readonly UserInputHandler _userInputHandler = new();
-    //Remove this and make class static?
-    private readonly DisplayMenuMessages _displayMenuMessages = new();
 
     public void StartGame()
     {
@@ -21,7 +20,7 @@ public class GameFacade
 
         do
         {
-            _displayMenuMessages.DisplayMainMenu();
+            DisplayMenuMessages.DisplayMainMenu();
             int userMainMenuInput = _userInputHandler.UserInputNumber();
 
             switch (userMainMenuInput)
@@ -33,11 +32,11 @@ public class GameFacade
                     if (SuccessfullLogin)
                     {
                         _eventSystem.Notify("Login was successful!");
-                        var keepLoggedInGoing = true;
+                        bool keepLoggedInGoing = true;
                         
                         do
                         {
-                            _displayMenuMessages.DisplayUserMenu();
+                            DisplayMenuMessages.DisplayUserMenu();
                             int userMenuInput = _userInputHandler.UserInputNumber();
 
                             switch (userMenuInput)
@@ -80,7 +79,7 @@ public class GameFacade
                         
                         do
                         {
-                            _displayMenuMessages.DisplayUserMenu();
+                            DisplayMenuMessages.DisplayUserMenu();
                             int userMenuInput = _userInputHandler.UserInputNumber();
 
                             switch (userMenuInput)

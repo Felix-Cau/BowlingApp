@@ -15,6 +15,18 @@ namespace BowlingApp.Services
             _observers[eventType].Add(observer);
         }
 
+        public void Unsubscribe(string eventType, IObserver observer)
+        {
+            if (_observers.ContainsKey(eventType))
+            {
+                _observers[eventType].Remove(observer);
+                if (_observers[eventType].Count == 0)
+                {
+                    _observers.Remove(eventType);
+                }
+            }
+        }
+
         public void Notify(string eventType)
         {
             if (_observers.ContainsKey(eventType))
