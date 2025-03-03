@@ -1,6 +1,6 @@
 ﻿namespace BowlingApp.Interfaces
 {
-    interface IObserver
+    public interface IObserver
     {
         void OnEvent(string eventType);
     }

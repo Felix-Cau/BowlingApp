@@ -2,7 +2,7 @@
 
 namespace BowlingApp.Services
 {
-    class EventSystem
+    public class EventSystem
     {
         private readonly Dictionary<string, List<IObserver>> _observers = [];
 

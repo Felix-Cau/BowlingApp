@@ -3,10 +3,8 @@ using BowlingApp.Services;
 
 namespace BowlingApp.Core;
 
-public class BowlingGame : IGame, IObserver
+public class BowlingGame(SingletonLogger logger) : IGame, IObserver
 {
-    private readonly SingletonLogger _logger = SingletonLogger.Instance;
-
     public void Run(params IPlayer[] players)
     {
         string playerOneName = players[0].Name;
@@ -32,6 +30,6 @@ public class BowlingGame : IGame, IObserver
 
     public void OnEvent(string eventType)
     {
-        _logger.Log(eventType);
+        logger.Log(eventType);
     }
 }
