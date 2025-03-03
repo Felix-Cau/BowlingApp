@@ -3,52 +3,48 @@ using BowlingApp.Utilities;
 
 namespace BowlingApp.Services;
 
-public class GameFacade
+public class GameFacade(MenuHandler menuHandler, EventSystem eventSystem, UserInputHandler userInputHandler)
 {
-    //Hub for the business logic as a part of the Facade Pattern.
-    private readonly MenuHandler _menuHandler = new();
-    private readonly EventSystem _eventSystem = new();
-    private readonly UserInputHandler _userInputHandler = new();
-
     public void StartGame()
     {
-        _eventSystem.Subscribe("Created User and saved to Database!", _menuHandler);
-        _eventSystem.Subscribe("Deleted User from Database!", _menuHandler);
-        _eventSystem.Subscribe("Login was successful!", _menuHandler);
+        eventSystem.Subscribe("Created User and saved to Database!", menuHandler);
+        eventSystem.Subscribe("Deleted User from Database!", menuHandler);
+        eventSystem.Subscribe("Login was successful!", menuHandler);
 
         var keepGoing = true;
 
         do
         {
             DisplayMenuMessages.DisplayMainMenu();
-            int userMainMenuInput = _userInputHandler.UserInputNumber();
+            int userMainMenuInput = userInputHandler.UserInputNumber();
 
             switch (userMainMenuInput)
             {
                 //Login
                 case 1:
-                    (bool SuccessfullLogin, User? loggedInUser) = _menuHandler.LoginMenuOption();
+                    (bool successfullLogin, User? loggedInUser) = menuHandler.LoginMenuOption();
 
-                    if (SuccessfullLogin)
+                    if (successfullLogin)
                     {
-                        _eventSystem.Notify("Login was successful!");
+                        eventSystem.Notify("Login was successful!");
+
                         bool keepLoggedInGoing = true;
                         
                         do
                         {
                             DisplayMenuMessages.DisplayUserMenu();
-                            int userMenuInput = _userInputHandler.UserInputNumber();
+                            int userMenuInput = userInputHandler.UserInputNumber();
 
                             switch (userMenuInput)
                             {
                                 case 1:
-                                    _menuHandler.PlayGameOptionAsLoggedIn(loggedInUser!);
+                                    menuHandler.PlayGameOptionAsLoggedIn(loggedInUser!);
                                     break;
                                 case 2:
                                     keepLoggedInGoing = false;
                                     break;
                                 case 3:
-                                    bool isTheUserStillInDb = _menuHandler.DeleteUser(loggedInUser!);
+                                    bool isTheUserStillInDb = menuHandler.DeleteUser(loggedInUser!);
                                     if (!isTheUserStillInDb)
                                     {
                                         keepLoggedInGoing = false;
@@ -69,33 +65,33 @@ public class GameFacade
                     break;
                 //Create user
                 case 2:
-                    (bool createdUser, User? newUser) = _menuHandler.CreateUser();
+                    (bool createdUser, User? newUser) = menuHandler.CreateUser();
 
                     if (createdUser)
                     {
-                        _eventSystem.Notify("Created User and saved to Database!");
+                        eventSystem.Notify("Created User and saved to Database!");
 
                         var keepLoggedInAfterCreateGoing = true;
                         
                         do
                         {
                             DisplayMenuMessages.DisplayUserMenu();
-                            int userMenuInput = _userInputHandler.UserInputNumber();
+                            int userMenuInput = userInputHandler.UserInputNumber();
 
                             switch (userMenuInput)
                             {
                                 case 1:
-                                    _menuHandler.PlayGameOptionAsLoggedIn(newUser!);
+                                    menuHandler.PlayGameOptionAsLoggedIn(newUser!);
                                     break;
                                 case 2:
                                     keepLoggedInAfterCreateGoing = false;
                                     break;
                                 case 3:
-                                    bool isTheUserStillInDb = _menuHandler.DeleteUser(newUser!);
+                                    bool isTheUserStillInDb = menuHandler.DeleteUser(newUser!);
                                     if (!isTheUserStillInDb)
                                     {
-                                        _eventSystem.Notify("Deleted User from Database!");
-
+                                        eventSystem.Notify("Deleted User from Database!");
+                                        
                                         keepLoggedInAfterCreateGoing = false;
                                     }
                                     break;
@@ -114,7 +110,7 @@ public class GameFacade
                     break;
                 //Continue as Guest
                 case 3:
-                    _menuHandler.PlayGameOptionAsNonUser();
+                    menuHandler.PlayGameOptionAsNonUser();
                     break;
                 //Exit game
                 case 4:
