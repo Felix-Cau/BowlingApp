@@ -22,9 +22,9 @@ public class GameFacade(MenuHandler menuHandler, EventSystem eventSystem, UserIn
             {
                 //Login
                 case 1:
-                    (bool successfullLogin, User? loggedInUser) = menuHandler.LoginMenuOption();
+                    (bool successfulLogin, User? loggedInUser) = menuHandler.LoginMenuOption();
 
-                    if (successfullLogin)
+                    if (successfulLogin)
                     {
                         eventSystem.Notify("Login was successful!");
 
@@ -91,6 +91,7 @@ public class GameFacade(MenuHandler menuHandler, EventSystem eventSystem, UserIn
                                     if (!isTheUserStillInDb)
                                     {
                                         eventSystem.Notify("Deleted User from Database!");
+                                        eventSystem.Unsubscribe("Deleted User from Database!", menuHandler);
                                         
                                         keepLoggedInAfterCreateGoing = false;
                                     }

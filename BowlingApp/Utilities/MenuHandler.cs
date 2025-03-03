@@ -15,9 +15,9 @@ public class MenuHandler(UserRepository userRepository, UserInputHandler userInp
         Console.WriteLine(DisplayMenuMessages.EnterPasswordMessage);
         var password = userInputHandler.UserInputString();
         
-        (bool successfullLogin, User? user) = userRepository.CheckUserLogin(username, password);
+        (bool successfulLogin, User? user) = userRepository.CheckUserLogin(username, password);
         
-        return (successfullLogin, user);
+        return (successfulLogin, user);
     }
 
     public (bool, User?) CreateUser()
@@ -40,9 +40,9 @@ public class MenuHandler(UserRepository userRepository, UserInputHandler userInp
 
     public bool DeleteUser(User user)
     {
-        bool IsTheUserStillInDb = userRepository.DeleteUser(user);
+        bool isTheUserStillInDb = userRepository.DeleteUser(user);
 
-        return IsTheUserStillInDb;
+        return isTheUserStillInDb;
     }
 
     public void PlayGameOptionAsLoggedIn(User loggedInUser)
